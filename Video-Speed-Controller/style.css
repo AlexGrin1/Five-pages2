@@ -11,7 +11,7 @@ body {
 }
 
 .wrapper {
-  width: 850px;
+  width: 830px;
   display: flex;
 }
 
@@ -20,7 +20,6 @@ video {
 }
 
 .speed {
-  background: #efefef;
   flex: 1;
   display: flex;
   align-items: flex-start;
@@ -32,7 +31,7 @@ video {
 
 .speed-bar {
   width: 100%;
-  background: linear-gradient(-170deg, #2e0dec 0%, #e93515 100%);
+  background: linear-gradient(-170deg, #008bfd50 0%, #bd1c0081 100%);
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
