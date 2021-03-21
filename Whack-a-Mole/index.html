@@ -59,7 +59,7 @@
       }
 
       function peep() {
-        const time = randomTime(300, 1100);
+        const time = randomTime(200, 600);
         const hole = randomHole(holes);
         hole.classList.add("up");
         setTimeout(() => {
@@ -72,7 +72,7 @@
         timeUp = false;
         score = 0;
         peep();
-        setTimeout(() => (timeUp = true), 10000);
+        setTimeout(() => (timeUp = true), 50000);
       }
       function bonk(e) {
         if (!e.isTrusted) return; // cheater!
