@@ -21,8 +21,8 @@ function changeRange() {
 }
 
 function changeProgress(e) {
-  let scrub = (e.offsetX / progress.offsetWidth) * video.duration;
-  video.currentTime = scrub;
+  var scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
+  video.currentTime = scrubTime;
 }
 function changeBar() {
   let persent = (this.currentTime / this.duration) * 100;
@@ -41,7 +41,7 @@ skipButtons.forEach((skip) => skip.addEventListener("click", currentTime));
 ranges.forEach((slider) => slider.addEventListener("change", changeRange));
 ranges.forEach((slider) => slider.addEventListener("mousemove", changeRange));
 
-size.addEventListener("click", fullScreen);
+player.addEventListener("dblclick", fullScreen);
 
 let mouseUse = false;
 progress.addEventListener("mousemove", (e) => mouseUse && changeProgress(e));

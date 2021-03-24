@@ -85,7 +85,7 @@ body {
 }
 .progress__filled {
   width: 50%;
-  background: #2c2c2b;
+  background: #d4d4d4;
   flex: 0;
   flex-basis: 50%;
 }
