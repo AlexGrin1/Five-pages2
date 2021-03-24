@@ -1,18 +1,17 @@
 /* Get Our Elements */
 const player = document.querySelector(".player");
-const video = player.querySelector(".viewer");
+const video = player.querySelector(".player__video__viewer");
 const progress = player.querySelector(".progress");
 const progressBar = player.querySelector(".progress__filled");
 const toggle = player.querySelector(".toggle");
 const skipButtons = player.querySelectorAll("[data-skip]");
 const ranges = player.querySelectorAll(".player__slider");
-
 /* Build out functions */
 function playVideo() {
   video[video.paused ? "play" : "pause"]();
 }
 function changeIcon() {
-  btnToggle.textContent = video.paused ? "►" : "❚ ❚";
+  toggle.textContent = video.paused ? "►" : "❚ ❚";
 }
 function currentTime() {
   video.currentTime += parseFloat(this.dataset.skip);
@@ -37,10 +36,10 @@ video.addEventListener("play", changeIcon);
 video.addEventListener("pause", changeIcon);
 video.addEventListener("timeupdate", changeBar);
 
-btnToggle.addEventListener("click", playVideo);
-btnSkip.forEach((skip) => skip.addEventListener("click", currentTime));
-range.forEach((slider) => slider.addEventListener("change", changeRange));
-range.forEach((slider) => slider.addEventListener("mousemove", changeRange));
+toggle.addEventListener("click", playVideo);
+skipButtons.forEach((skip) => skip.addEventListener("click", currentTime));
+ranges.forEach((slider) => slider.addEventListener("change", changeRange));
+ranges.forEach((slider) => slider.addEventListener("mousemove", changeRange));
 
 size.addEventListener("click", fullScreen);
 
