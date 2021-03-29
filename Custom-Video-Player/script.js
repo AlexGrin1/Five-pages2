@@ -26,7 +26,7 @@ function changeProgress(e) {
 }
 function changeBar() {
   let persent = (this.currentTime / this.duration) * 100;
-  progressBar.style.width = `${persent}%`;
+  progressBar.style.flexBasis = `${persent}%`;
 }
 function fullScreen() {
   player.classList.toggle("full-screen");
